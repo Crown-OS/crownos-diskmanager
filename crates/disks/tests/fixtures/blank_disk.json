@@ -1,0 +1,51 @@
+{
+  "objects": {
+    "/org/freedesktop/UDisks2/drives/WDC_WD20EZRZ_00Z5HB0_WD_WCC4M1234567": {
+      "Drive": {
+        "Vendor": "",
+        "Model": "WDC WD20EZRZ-00Z5HB0",
+        "Serial": "WD-WCC4M1234567",
+        "Revision": "1.0",
+        "WWN": "",
+        "Size": 2000398934016,
+        "ConnectionBus": "",
+        "RotationRate": 5400,
+        "Removable": false,
+        "MediaRemovable": false,
+        "Ejectable": false,
+        "CanPowerOff": false,
+        "Optical": false,
+        "SortKey": "00coldplug/00fixed/WD-WCC4M1234567"
+      },
+      "Drive.Ata": {
+        "SmartSupported": true,
+        "SmartEnabled": true,
+        "SmartUpdated": 1793800000,
+        "SmartFailing": false,
+        "SmartTemperature": 306.15,
+        "SmartPowerOnSeconds": 45000000,
+        "SmartNumBadSectors": 0,
+        "SmartNumAttributesFailing": 0,
+        "SmartNumAttributesFailedInThePast": 0,
+        "SmartSelftestStatus": "success"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sde": {
+      "Block": {
+        "Device": "/dev/sde",
+        "PreferredDevice": "/dev/sde",
+        "Size": 2000398934016,
+        "Drive": "/org/freedesktop/UDisks2/drives/WDC_WD20EZRZ_00Z5HB0_WD_WCC4M1234567",
+        "IdUsage": "",
+        "IdType": "",
+        "IdVersion": "",
+        "IdLabel": "",
+        "IdUUID": "",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      }
+    }
+  }
+}

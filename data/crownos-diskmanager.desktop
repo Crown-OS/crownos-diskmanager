@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Disk Manager
+GenericName=Disk Utility
+Comment=Partition, format and repair drives, and write disk images
+Exec=crownos-diskmanager
+Icon=drive-harddisk
+Terminal=false
+Categories=System;Filesystem;
+Keywords=disk;drive;partition;format;usb;iso;image;mount;filesystem;storage;
+StartupWMClass=crownos-diskmanager

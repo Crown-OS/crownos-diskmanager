@@ -1,0 +1,134 @@
+{
+  "objects": {
+    "/org/freedesktop/UDisks2/drives/Samsung_PSSD_T7_S5SXNS0R700123K": {
+      "Drive": {
+        "Vendor": "Samsung",
+        "Model": "PSSD T7",
+        "Serial": "S5SXNS0R700123K",
+        "Revision": "1.0",
+        "WWN": "",
+        "Size": 1000204886016,
+        "ConnectionBus": "usb",
+        "RotationRate": 0,
+        "Removable": true,
+        "MediaRemovable": false,
+        "Ejectable": false,
+        "CanPowerOff": true,
+        "Optical": false,
+        "SortKey": "01hotplug/S5SXNS0R700123K"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdd": {
+      "Block": {
+        "Device": "/dev/sdd",
+        "PreferredDevice": "/dev/sdd",
+        "Size": 1000204886016,
+        "Drive": "/org/freedesktop/UDisks2/drives/Samsung_PSSD_T7_S5SXNS0R700123K",
+        "IdUsage": "",
+        "IdType": "",
+        "IdVersion": "",
+        "IdLabel": "",
+        "IdUUID": "",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "PartitionTable": {
+        "Type": "gpt",
+        "Partitions": [
+          "/org/freedesktop/UDisks2/block_devices/sdd1",
+          "/org/freedesktop/UDisks2/block_devices/sdd2"
+        ]
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdd1": {
+      "Block": {
+        "Device": "/dev/sdd1",
+        "PreferredDevice": "/dev/sdd1",
+        "Size": 322122547200,
+        "Drive": "/org/freedesktop/UDisks2/drives/Samsung_PSSD_T7_S5SXNS0R700123K",
+        "IdUsage": "crypto",
+        "IdType": "crypto_LUKS",
+        "IdVersion": "2",
+        "IdLabel": "",
+        "IdUUID": "11111111-2222-4333-8444-555555555555",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sdd",
+        "Number": 1,
+        "Offset": 1048576,
+        "Size": 322122547200,
+        "Type": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+        "Name": "Vault",
+        "UUID": "c0ffee00-0001-4000-8000-000000000001",
+        "IsContainer": false,
+        "IsContained": false
+      },
+      "Encrypted": {
+        "CleartextDevice": "/",
+        "HintEncryptionType": "luks2",
+        "MetadataSize": 16777216
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdd2": {
+      "Block": {
+        "Device": "/dev/sdd2",
+        "PreferredDevice": "/dev/sdd2",
+        "Size": 644245094400,
+        "Drive": "/org/freedesktop/UDisks2/drives/Samsung_PSSD_T7_S5SXNS0R700123K",
+        "IdUsage": "crypto",
+        "IdType": "crypto_LUKS",
+        "IdVersion": "2",
+        "IdLabel": "",
+        "IdUUID": "66666666-7777-4888-8999-aaaaaaaaaaaa",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sdd",
+        "Number": 2,
+        "Offset": 322123595776,
+        "Size": 644245094400,
+        "Type": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+        "Name": "Photos",
+        "UUID": "c0ffee00-0002-4000-8000-000000000002",
+        "IsContainer": false,
+        "IsContained": false
+      },
+      "Encrypted": {
+        "CleartextDevice": "/org/freedesktop/UDisks2/block_devices/dm_2d0",
+        "HintEncryptionType": "luks2",
+        "MetadataSize": 16777216
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/dm_2d0": {
+      "Block": {
+        "Device": "/dev/dm-0",
+        "PreferredDevice": "/dev/mapper/luks-66666666-7777-4888-8999-aaaaaaaaaaaa",
+        "Size": 644228317184,
+        "Drive": "/",
+        "IdUsage": "filesystem",
+        "IdType": "ext4",
+        "IdVersion": "1.0",
+        "IdLabel": "Photos",
+        "IdUUID": "bbbbbbbb-cccc-4ddd-8eee-ffffffffffff",
+        "CryptoBackingDevice": "/org/freedesktop/UDisks2/block_devices/sdd2",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/run/media/marvelxcodes/Photos"
+        ]
+      }
+    }
+  }
+}

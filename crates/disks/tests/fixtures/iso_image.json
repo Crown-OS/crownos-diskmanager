@@ -1,0 +1,31 @@
+{
+  "objects": {
+    "/org/freedesktop/UDisks2/block_devices/loop0": {
+      "Block": {
+        "Device": "/dev/loop0",
+        "PreferredDevice": "/dev/loop0",
+        "Size": 2147483648,
+        "Drive": "/",
+        "IdUsage": "filesystem",
+        "IdType": "iso9660",
+        "IdVersion": "Joliet Extension",
+        "IdLabel": "CROWNOS_202611",
+        "IdUUID": "2026-11-01-10-00-00-00",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": true
+      },
+      "Loop": {
+        "BackingFile": "/home/marvelxcodes/Downloads/crownos-2026.11-x86_64.iso",
+        "SetupByUID": 1000,
+        "Autoclear": true
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/run/media/marvelxcodes/CROWNOS_202611"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "objects": {
+    "/org/freedesktop/UDisks2/drives/Samsung_SSD_870_EVO_500GB_S6PXNM0T123456A": {
+      "Drive": {
+        "Vendor": "",
+        "Model": "Samsung SSD 870 EVO 500GB",
+        "Serial": "S6PXNM0T123456A",
+        "Revision": "1.0",
+        "WWN": "",
+        "Size": 500107862016,
+        "ConnectionBus": "",
+        "RotationRate": 0,
+        "Removable": false,
+        "MediaRemovable": false,
+        "Ejectable": false,
+        "CanPowerOff": false,
+        "Optical": false,
+        "SortKey": "00coldplug/00fixed/S6PXNM0T123456A"
+      },
+      "Drive.Ata": {
+        "SmartSupported": true,
+        "SmartEnabled": true,
+        "SmartUpdated": 1793800000,
+        "SmartFailing": false,
+        "SmartTemperature": 306.15,
+        "SmartPowerOnSeconds": 45000000,
+        "SmartNumBadSectors": 0,
+        "SmartNumAttributesFailing": 0,
+        "SmartNumAttributesFailedInThePast": 0,
+        "SmartSelftestStatus": "success"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdb": {
+      "Block": {
+        "Device": "/dev/sdb",
+        "PreferredDevice": "/dev/sdb",
+        "Size": 500107862016,
+        "Drive": "/org/freedesktop/UDisks2/drives/Samsung_SSD_870_EVO_500GB_S6PXNM0T123456A",
+        "IdUsage": "",
+        "IdType": "",
+        "IdVersion": "",
+        "IdLabel": "",
+        "IdUUID": "",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "PartitionTable": {
+        "Type": "gpt",
+        "Partitions": [
+          "/org/freedesktop/UDisks2/block_devices/sdb3",
+          "/org/freedesktop/UDisks2/block_devices/sdb1",
+          "/org/freedesktop/UDisks2/block_devices/sdb2"
+        ]
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdb1": {
+      "Block": {
+        "Device": "/dev/sdb1",
+        "PreferredDevice": "/dev/sdb1",
+        "Size": 107374182400,
+        "Drive": "/org/freedesktop/UDisks2/drives/Samsung_SSD_870_EVO_500GB_S6PXNM0T123456A",
+        "IdUsage": "filesystem",
+        "IdType": "ext4",
+        "IdVersion": "1.0",
+        "IdLabel": "Data",
+        "IdUUID": "0d7c2f1e-2a4b-4c6d-8e9f-0a1b2c3d4e5f",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sdb",
+        "Number": 1,
+        "Offset": 1048576,
+        "Size": 107374182400,
+        "Type": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+        "Name": "Data",
+        "UUID": "b1c2d3e4-0001-4000-8000-000000000001",
+        "IsContainer": false,
+        "IsContained": false
+      },
+      "Filesystem": {
+        "MountPoints": []
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdb2": {
+      "Block": {
+        "Device": "/dev/sdb2",
+        "PreferredDevice": "/dev/sdb2",
+        "Size": 214748364800,
+        "Drive": "/org/freedesktop/UDisks2/drives/Samsung_SSD_870_EVO_500GB_S6PXNM0T123456A",
+        "IdUsage": "filesystem",
+        "IdType": "btrfs",
+        "IdVersion": "1",
+        "IdLabel": "Projects",
+        "IdUUID": "7e8f9a0b-1c2d-4e3f-8a5b-6c7d8e9f0a1b",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sdb",
+        "Number": 2,
+        "Offset": 161062322176,
+        "Size": 214748364800,
+        "Type": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+        "Name": "Projects",
+        "UUID": "b1c2d3e4-0002-4000-8000-000000000002",
+        "IsContainer": false,
+        "IsContained": false
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/mnt/projects"
+        ]
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdb3": {
+      "Block": {
+        "Device": "/dev/sdb3",
+        "PreferredDevice": "/dev/sdb3",
+        "Size": 8589934592,
+        "Drive": "/org/freedesktop/UDisks2/drives/Samsung_SSD_870_EVO_500GB_S6PXNM0T123456A",
+        "IdUsage": "other",
+        "IdType": "swap",
+        "IdVersion": "1",
+        "IdLabel": "",
+        "IdUUID": "9a8b7c6d-5e4f-4a3b-8c2d-1e0f9a8b7c6d",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sdb",
+        "Number": 3,
+        "Offset": 375810686976,
+        "Size": 8589934592,
+        "Type": "0657fd6d-a4ab-43c4-84e5-0933c84b4f4f",
+        "Name": "",
+        "UUID": "b1c2d3e4-0003-4000-8000-000000000003",
+        "IsContainer": false,
+        "IsContained": false
+      },
+      "Swapspace": {
+        "Active": true
+      }
+    },
+    "/org/freedesktop/UDisks2/drives/ST1000DM010_2EP102_Z9A1B2C3": {
+      "Drive": {
+        "Vendor": "",
+        "Model": "ST1000DM010-2EP102",
+        "Serial": "Z9A1B2C3",
+        "Revision": "1.0",
+        "WWN": "",
+        "Size": 1000204886016,
+        "ConnectionBus": "",
+        "RotationRate": 7200,
+        "Removable": false,
+        "MediaRemovable": false,
+        "Ejectable": false,
+        "CanPowerOff": false,
+        "Optical": false,
+        "SortKey": "00coldplug/00fixed/Z9A1B2C3"
+      },
+      "Drive.Ata": {
+        "SmartSupported": true,
+        "SmartEnabled": true,
+        "SmartUpdated": 1793800000,
+        "SmartFailing": true,
+        "SmartTemperature": 318.15,
+        "SmartPowerOnSeconds": 150000000,
+        "SmartNumBadSectors": 24,
+        "SmartNumAttributesFailing": 1,
+        "SmartNumAttributesFailedInThePast": 2,
+        "SmartSelftestStatus": "success"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdc": {
+      "Block": {
+        "Device": "/dev/sdc",
+        "PreferredDevice": "/dev/sdc",
+        "Size": 1000204886016,
+        "Drive": "/org/freedesktop/UDisks2/drives/ST1000DM010_2EP102_Z9A1B2C3",
+        "IdUsage": "",
+        "IdType": "",
+        "IdVersion": "",
+        "IdLabel": "",
+        "IdUUID": "",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "PartitionTable": {
+        "Type": "dos",
+        "Partitions": [
+          "/org/freedesktop/UDisks2/block_devices/sdc1",
+          "/org/freedesktop/UDisks2/block_devices/sdc2",
+          "/org/freedesktop/UDisks2/block_devices/sdc5"
+        ]
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdc1": {
+      "Block": {
+        "Device": "/dev/sdc1",
+        "PreferredDevice": "/dev/sdc1",
+        "Size": 536870912000,
+        "Drive": "/org/freedesktop/UDisks2/drives/ST1000DM010_2EP102_Z9A1B2C3",
+        "IdUsage": "filesystem",
+        "IdType": "ntfs",
+        "IdVersion": "",
+        "IdLabel": "Backup",
+        "IdUUID": "4A1B2C3D4E5F6071",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sdc",
+        "Number": 1,
+        "Offset": 1048576,
+        "Size": 536870912000,
+        "Type": "0x07",
+        "Name": "",
+        "UUID": "a1b2c3d4-01",
+        "IsContainer": false,
+        "IsContained": false
+      },
+      "Filesystem": {
+        "MountPoints": []
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdc2": {
+      "Block": {
+        "Device": "/dev/sdc2",
+        "PreferredDevice": "/dev/sdc2",
+        "Size": 1024,
+        "Drive": "/org/freedesktop/UDisks2/drives/ST1000DM010_2EP102_Z9A1B2C3",
+        "IdUsage": "",
+        "IdType": "",
+        "IdVersion": "",
+        "IdLabel": "",
+        "IdUUID": "",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sdc",
+        "Number": 2,
+        "Offset": 536871960576,
+        "Size": 429496729600,
+        "Type": "0x05",
+        "Name": "",
+        "UUID": "a1b2c3d4-02",
+        "IsContainer": true,
+        "IsContained": false
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdc5": {
+      "Block": {
+        "Device": "/dev/sdc5",
+        "PreferredDevice": "/dev/sdc5",
+        "Size": 429495681024,
+        "Drive": "/org/freedesktop/UDisks2/drives/ST1000DM010_2EP102_Z9A1B2C3",
+        "IdUsage": "raid",
+        "IdType": "LVM2_member",
+        "IdVersion": "LVM2 001",
+        "IdLabel": "",
+        "IdUUID": "Qx1T2r-3s4U-5v6W-7x8Y-9z0A-1b2C-3d4E5f",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sdc",
+        "Number": 5,
+        "Offset": 536873009152,
+        "Size": 429495681024,
+        "Type": "0x8e",
+        "Name": "",
+        "UUID": "a1b2c3d4-05",
+        "IsContainer": false,
+        "IsContained": true
+      }
+    }
+  }
+}

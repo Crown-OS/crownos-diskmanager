@@ -1,0 +1,114 @@
+{
+  "objects": {
+    "/org/freedesktop/UDisks2/block_devices/sda": {
+      "Block": {
+        "Device": "/dev/sda",
+        "PreferredDevice": "/dev/sda",
+        "Size": 61530439680,
+        "Drive": "/org/freedesktop/UDisks2/drives/SanDisk_Ultra_4C530001230405117053",
+        "IdUsage": "",
+        "IdType": "",
+        "IdVersion": "",
+        "IdLabel": "",
+        "IdUUID": "",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "PartitionTable": {
+        "Type": "dos",
+        "Partitions": [
+          "/org/freedesktop/UDisks2/block_devices/sda1"
+        ]
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sda1": {
+      "Block": {
+        "Device": "/dev/sda1",
+        "PreferredDevice": "/dev/sda1",
+        "Size": 61529391104,
+        "Drive": "/org/freedesktop/UDisks2/drives/SanDisk_Ultra_4C530001230405117053",
+        "IdUsage": "filesystem",
+        "IdType": "exfat",
+        "IdVersion": "1.0",
+        "IdLabel": "SANDISK",
+        "IdUUID": "6A3F-91C2",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Partition": {
+        "Table": "/org/freedesktop/UDisks2/block_devices/sda",
+        "Number": 1,
+        "Offset": 1048576,
+        "Size": 61529391104,
+        "Type": "0x07",
+        "Name": "",
+        "UUID": "2f6a1b7c-01",
+        "IsContainer": false,
+        "IsContained": false
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/run/media/marvelxcodes/SANDISK"
+        ]
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/sdf": {
+      "Block": {
+        "Device": "/dev/sdf",
+        "PreferredDevice": "/dev/sdf",
+        "Size": 0,
+        "Drive": "/org/freedesktop/UDisks2/drives/Generic_STORAGE_DEVICE_000000000819",
+        "IdUsage": "",
+        "IdType": "",
+        "IdVersion": "",
+        "IdLabel": "",
+        "IdUUID": "",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      }
+    },
+    "/org/freedesktop/UDisks2/drives/Generic_STORAGE_DEVICE_000000000819": {
+      "Drive": {
+        "Vendor": "Generic",
+        "Model": "STORAGE DEVICE",
+        "Serial": "000000000819",
+        "Revision": "0819",
+        "WWN": "",
+        "Size": 0,
+        "ConnectionBus": "usb",
+        "RotationRate": -1,
+        "Removable": true,
+        "MediaRemovable": true,
+        "MediaAvailable": false,
+        "Ejectable": true,
+        "CanPowerOff": true,
+        "Optical": false,
+        "SortKey": "01hotplug/000000000819"
+      }
+    },
+    "/org/freedesktop/UDisks2/drives/SanDisk_Ultra_4C530001230405117053": {
+      "Drive": {
+        "Vendor": "SanDisk",
+        "Model": "Ultra",
+        "Serial": "4C530001230405117053",
+        "Revision": "1.0",
+        "WWN": "",
+        "Size": 61530439680,
+        "ConnectionBus": "usb",
+        "RotationRate": -1,
+        "Removable": true,
+        "MediaRemovable": false,
+        "Ejectable": false,
+        "CanPowerOff": true,
+        "Optical": false,
+        "SortKey": "01hotplug/4C530001230405117053"
+      }
+    }
+  }
+}

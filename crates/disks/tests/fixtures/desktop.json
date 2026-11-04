@@ -1,0 +1,536 @@
+{
+  "objects": {
+    "/org/freedesktop/UDisks2/block_devices/loop1": {
+      "Block": {
+        "Device": "/dev/loop1",
+        "PreferredDevice": "/dev/loop1",
+        "Size": 1610612736,
+        "Drive": "/",
+        "IdUsage": "filesystem",
+        "IdType": "ext4",
+        "IdVersion": "1.0",
+        "IdLabel": "",
+        "IdUUID": "5b1f8a5e-7c63-4b2a-9d36-2f1d0c4e8a11",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Loop": {
+        "BackingFile": "/var/lib/waydroid/images/system.img",
+        "SetupByUID": 0,
+        "Autoclear": true
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/var/lib/waydroid/rootfs"
+        ]
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/loop2": {
+      "Block": {
+        "Device": "/dev/loop2",
+        "PreferredDevice": "/dev/loop2",
+        "Size": 209715200,
+        "Drive": "/",
+        "IdUsage": "filesystem",
+        "IdType": "ext4",
+        "IdVersion": "1.0",
+        "IdLabel": "",
+        "IdUUID": "c3d2a1b0-55aa-4e1f-8f00-1a2b3c4d5e6f",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Loop": {
+        "BackingFile": "/var/lib/waydroid/images/vendor.img",
+        "SetupByUID": 0,
+        "Autoclear": true
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/var/lib/waydroid/rootfs/vendor"
+        ]
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/loop3": {
+      "Block": {
+        "Device": "/dev/loop3",
+        "PreferredDevice": "/dev/loop3",
+        "Size": 0,
+        "Drive": "/",
+        "IdUsage": "",
+        "IdType": "",
+        "IdVersion": "",
+        "IdLabel": "",
+        "IdUUID": "",
+        "CryptoBackingDevice": "/",
+        "HintIgnore": false,
+        "HintSystem": false,
+        "ReadOnly": false
+      },
+      "Loop": {
+        "BackingFile": "",
+        "SetupByUID": 1000,
+        "Autoclear": false
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/nvme0n1": {
+      "Block": {
+        "CryptoBackingDevice": "/",
+        "Device": "/dev/nvme0n1",
+        "DeviceNumber": 66307,
+        "Drive": "/org/freedesktop/UDisks2/drives/CT500P3PSSD8_25124F20B4F1",
+        "HintAuto": false,
+        "HintIconName": "",
+        "HintIgnore": false,
+        "HintName": "",
+        "HintPartitionable": true,
+        "HintSymbolicIconName": "",
+        "HintSystem": true,
+        "Id": "by-id-nvme-CT500P3PSSD8_25124F20B4F1",
+        "IdLabel": "",
+        "IdType": "",
+        "IdUUID": "",
+        "IdUsage": "",
+        "IdVersion": "",
+        "MDRaid": "/",
+        "MDRaidMember": "/",
+        "PreferredDevice": "/dev/nvme0n1",
+        "ReadOnly": false,
+        "Size": 500107862016
+      },
+      "PartitionTable": {
+        "Partitions": [
+          "/org/freedesktop/UDisks2/block_devices/nvme0n1p3"
+        ],
+        "Type": "gpt"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/nvme0n1p3": {
+      "Block": {
+        "CryptoBackingDevice": "/",
+        "Device": "/dev/nvme0n1p3",
+        "DeviceNumber": 66308,
+        "Drive": "/org/freedesktop/UDisks2/drives/CT500P3PSSD8_25124F20B4F1",
+        "HintAuto": false,
+        "HintIconName": "",
+        "HintIgnore": false,
+        "HintName": "",
+        "HintPartitionable": true,
+        "HintSymbolicIconName": "",
+        "HintSystem": true,
+        "Id": "by-id-nvme-CT500P3PSSD8_25124F20B4F1-part3",
+        "IdLabel": "Workspace",
+        "IdType": "ext4",
+        "IdUUID": "e9b82709-3dcc-4cfb-abf4-ae0435f5ad99",
+        "IdUsage": "filesystem",
+        "IdVersion": "1.0",
+        "MDRaid": "/",
+        "MDRaidMember": "/",
+        "PreferredDevice": "/dev/nvme0n1p3",
+        "ReadOnly": false,
+        "Size": 500106788864
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/e"
+        ],
+        "Size": 500106788864
+      },
+      "Partition": {
+        "Flags": 0,
+        "IsContained": false,
+        "IsContainer": false,
+        "Name": "Workspace",
+        "Number": 3,
+        "Offset": 1048576,
+        "Size": 500106788864,
+        "Table": "/org/freedesktop/UDisks2/block_devices/nvme0n1",
+        "Type": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+        "UUID": "1268b6f8-5796-4403-afb5-0874f0e3d432"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/nvme1n1": {
+      "Block": {
+        "CryptoBackingDevice": "/",
+        "Device": "/dev/nvme1n1",
+        "DeviceNumber": 66304,
+        "Drive": "/org/freedesktop/UDisks2/drives/SAMSUNG_MZVL2512HDJD_00BL2_S6Z5NE0W620612",
+        "HintAuto": false,
+        "HintIconName": "",
+        "HintIgnore": false,
+        "HintName": "",
+        "HintPartitionable": true,
+        "HintSymbolicIconName": "",
+        "HintSystem": true,
+        "Id": "by-id-nvme-SAMSUNG_MZVL2512HDJD-00BL2_S6Z5NE0W620612",
+        "IdLabel": "",
+        "IdType": "",
+        "IdUUID": "",
+        "IdUsage": "",
+        "IdVersion": "",
+        "MDRaid": "/",
+        "MDRaidMember": "/",
+        "PreferredDevice": "/dev/nvme1n1",
+        "ReadOnly": false,
+        "Size": 512110190592
+      },
+      "PartitionTable": {
+        "Partitions": [
+          "/org/freedesktop/UDisks2/block_devices/nvme1n1p6",
+          "/org/freedesktop/UDisks2/block_devices/nvme1n1p5"
+        ],
+        "Type": "gpt"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/nvme1n1p5": {
+      "Block": {
+        "CryptoBackingDevice": "/",
+        "Device": "/dev/nvme1n1p5",
+        "DeviceNumber": 66305,
+        "Drive": "/org/freedesktop/UDisks2/drives/SAMSUNG_MZVL2512HDJD_00BL2_S6Z5NE0W620612",
+        "HintAuto": false,
+        "HintIconName": "",
+        "HintIgnore": true,
+        "HintName": "",
+        "HintPartitionable": true,
+        "HintSymbolicIconName": "",
+        "HintSystem": true,
+        "Id": "by-id-nvme-SAMSUNG_MZVL2512HDJD-00BL2_S6Z5NE0W620612-part5",
+        "IdLabel": "",
+        "IdType": "vfat",
+        "IdUUID": "24F6-7174",
+        "IdUsage": "filesystem",
+        "IdVersion": "FAT32",
+        "MDRaid": "/",
+        "MDRaidMember": "/",
+        "PreferredDevice": "/dev/nvme1n1p5",
+        "ReadOnly": false,
+        "Size": 1073741824
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/boot"
+        ],
+        "Size": 0
+      },
+      "Partition": {
+        "Flags": 0,
+        "IsContained": false,
+        "IsContainer": false,
+        "Name": "",
+        "Number": 5,
+        "Offset": 1048576,
+        "Size": 1073741824,
+        "Table": "/org/freedesktop/UDisks2/block_devices/nvme1n1",
+        "Type": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+        "UUID": "2bc55cd6-29f8-40b4-a671-7e69c412efe6"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/nvme1n1p6": {
+      "Block": {
+        "CryptoBackingDevice": "/",
+        "Device": "/dev/nvme1n1p6",
+        "DeviceNumber": 66306,
+        "Drive": "/org/freedesktop/UDisks2/drives/SAMSUNG_MZVL2512HDJD_00BL2_S6Z5NE0W620612",
+        "HintAuto": false,
+        "HintIconName": "",
+        "HintIgnore": false,
+        "HintName": "",
+        "HintPartitionable": true,
+        "HintSymbolicIconName": "",
+        "HintSystem": true,
+        "Id": "by-id-nvme-SAMSUNG_MZVL2512HDJD-00BL2_S6Z5NE0W620612-part6",
+        "IdLabel": "",
+        "IdType": "ext4",
+        "IdUUID": "f68b5f99-d2dd-43cb-8a24-f667449947da",
+        "IdUsage": "filesystem",
+        "IdVersion": "1.0",
+        "MDRaid": "/",
+        "MDRaidMember": "/",
+        "PreferredDevice": "/dev/nvme1n1p6",
+        "ReadOnly": false,
+        "Size": 511035047936
+      },
+      "Filesystem": {
+        "MountPoints": [
+          "/"
+        ],
+        "Size": 511035047936
+      },
+      "Partition": {
+        "Flags": 0,
+        "IsContained": false,
+        "IsContainer": false,
+        "Name": "",
+        "Number": 6,
+        "Offset": 1074790400,
+        "Size": 511035047936,
+        "Table": "/org/freedesktop/UDisks2/block_devices/nvme1n1",
+        "Type": "4f68bce3-e8cd-4db1-96e7-fbcaf984b709",
+        "UUID": "d5ef90ad-6dba-4415-8b5e-9efdf935cf0a"
+      }
+    },
+    "/org/freedesktop/UDisks2/block_devices/zram0": {
+      "Block": {
+        "CryptoBackingDevice": "/",
+        "Device": "/dev/zram0",
+        "DeviceNumber": 64768,
+        "Drive": "/",
+        "HintAuto": false,
+        "HintIconName": "",
+        "HintIgnore": true,
+        "HintName": "",
+        "HintPartitionable": true,
+        "HintSymbolicIconName": "",
+        "HintSystem": true,
+        "Id": "",
+        "IdLabel": "zram0",
+        "IdType": "swap",
+        "IdUUID": "20ed4b29-f6ea-4c70-8eb0-db0c47e39ec2",
+        "IdUsage": "other",
+        "IdVersion": "1",
+        "MDRaid": "/",
+        "MDRaidMember": "/",
+        "PreferredDevice": "/dev/zram0",
+        "ReadOnly": false,
+        "Size": 4294967296
+      },
+      "Swapspace": {
+        "Active": true
+      }
+    },
+    "/org/freedesktop/UDisks2/drives/CT500P3PSSD8_25124F20B4F1": {
+      "Drive": {
+        "CanPowerOff": false,
+        "ConnectionBus": "",
+        "Ejectable": false,
+        "Id": "CT500P3PSSD8-25124F20B4F1",
+        "Media": "",
+        "MediaAvailable": true,
+        "MediaChangeDetected": true,
+        "MediaRemovable": false,
+        "Model": "CT500P3PSSD8",
+        "Optical": false,
+        "OpticalBlank": false,
+        "OpticalNumAudioTracks": 0,
+        "OpticalNumDataTracks": 0,
+        "OpticalNumSessions": 0,
+        "OpticalNumTracks": 0,
+        "Removable": false,
+        "Revision": "P9CR413",
+        "RotationRate": 0,
+        "Seat": "seat0",
+        "Serial": "25124F20B4F1",
+        "SiblingId": "",
+        "Size": 0,
+        "SortKey": "00coldplug/00fixed/nvme0",
+        "Vendor": "",
+        "WWN": ""
+      },
+      "NVMe.Controller": {
+        "ControllerID": 0,
+        "FGUID": "",
+        "NVMeRevision": "1.4",
+        "SanitizePercentRemaining": -1,
+        "SanitizeStatus": "never_sanitized",
+        "SmartCriticalWarning": [],
+        "SmartPowerOnHours": 5487,
+        "SmartSelftestPercentRemaining": -1,
+        "SmartSelftestStatus": "success",
+        "SmartTemperature": 315,
+        "SmartUpdated": 1793800692,
+        "State": "live",
+        "UnallocatedCapacity": 0
+      }
+    },
+    "/org/freedesktop/UDisks2/drives/SAMSUNG_MZVL2512HDJD_00BL2_S6Z5NE0W620612": {
+      "Drive": {
+        "CanPowerOff": false,
+        "ConnectionBus": "",
+        "Ejectable": false,
+        "Id": "SAMSUNG-MZVL2512HDJD-00BL2-S6Z5NE0W620612",
+        "Media": "",
+        "MediaAvailable": true,
+        "MediaChangeDetected": true,
+        "MediaRemovable": false,
+        "Model": "SAMSUNG MZVL2512HDJD-00BL2",
+        "Optical": false,
+        "OpticalBlank": false,
+        "OpticalNumAudioTracks": 0,
+        "OpticalNumDataTracks": 0,
+        "OpticalNumSessions": 0,
+        "OpticalNumTracks": 0,
+        "Removable": false,
+        "Revision": "5L1QGXD7",
+        "RotationRate": 0,
+        "Seat": "seat0",
+        "Serial": "S6Z5NE0W620612",
+        "SiblingId": "",
+        "Size": 512110190592,
+        "SortKey": "00coldplug/00fixed/nvme1",
+        "Vendor": "",
+        "WWN": ""
+      },
+      "NVMe.Controller": {
+        "ControllerID": 6,
+        "FGUID": "",
+        "NVMeRevision": "1.3",
+        "SanitizePercentRemaining": -1,
+        "SanitizeStatus": "never_sanitized",
+        "SmartCriticalWarning": [],
+        "SmartPowerOnHours": 1547,
+        "SmartSelftestPercentRemaining": -1,
+        "SmartSelftestStatus": "success",
+        "SmartTemperature": 321,
+        "SmartUpdated": 1793800692,
+        "State": "live",
+        "UnallocatedCapacity": 0
+      }
+    }
+  },
+  "capabilities": {
+    "supported_filesystems": [
+      "ext2",
+      "ext3",
+      "ext4",
+      "xfs",
+      "vfat",
+      "ntfs",
+      "f2fs",
+      "nilfs2",
+      "exfat",
+      "btrfs",
+      "udf",
+      "swap"
+    ],
+    "encryption_types": [
+      "luks1",
+      "luks2"
+    ],
+    "can_format": {
+      "btrfs": {
+        "available": false,
+        "missing_tool": "mkfs.btrfs"
+      },
+      "exfat": {
+        "available": false,
+        "missing_tool": "mkfs.exfat"
+      },
+      "ext2": {
+        "available": true
+      },
+      "ext3": {
+        "available": true
+      },
+      "ext4": {
+        "available": true
+      },
+      "f2fs": {
+        "available": false,
+        "missing_tool": "mkfs.f2fs"
+      },
+      "nilfs2": {
+        "available": false,
+        "missing_tool": "mkfs.nilfs2"
+      },
+      "ntfs": {
+        "available": false,
+        "missing_tool": "mkfs.ntfs"
+      },
+      "swap": {
+        "available": true
+      },
+      "udf": {
+        "available": false,
+        "missing_tool": "mkudffs"
+      },
+      "vfat": {
+        "available": true
+      },
+      "xfs": {
+        "available": false,
+        "missing_tool": "mkfs.xfs"
+      }
+    },
+    "can_resize": {
+      "btrfs": {
+        "available": false,
+        "modes": 24,
+        "missing_tool": "btrfs"
+      },
+      "ext2": {
+        "available": true,
+        "modes": 22
+      },
+      "ext3": {
+        "available": true,
+        "modes": 22
+      },
+      "ext4": {
+        "available": true,
+        "modes": 22
+      },
+      "f2fs": {
+        "available": false,
+        "modes": 6,
+        "missing_tool": "resize.f2fs"
+      },
+      "nilfs2": {
+        "available": false,
+        "modes": 24,
+        "missing_tool": "nilfs-resize"
+      },
+      "ntfs": {
+        "available": false,
+        "modes": 6,
+        "missing_tool": "ntfsresize"
+      },
+      "vfat": {
+        "available": true,
+        "modes": 6
+      },
+      "xfs": {
+        "available": false,
+        "modes": 20,
+        "missing_tool": "xfs_growfs"
+      }
+    }
+  },
+  "nvme_attributes": {
+    "/org/freedesktop/UDisks2/drives/CT500P3PSSD8_25124F20B4F1": {
+      "avail_spare": 100,
+      "cctemp": 358,
+      "critical_temp_time": 0,
+      "ctrl_busy_time": 976,
+      "media_errors": 0,
+      "num_err_log_entries": 0,
+      "percent_used": 6,
+      "power_cycles": 62848,
+      "spare_thresh": 5,
+      "total_data_read": 12241915392000,
+      "total_data_written": 8872455168000,
+      "unsafe_shutdowns": 350,
+      "warning_temp_time": 0,
+      "wctemp": 356
+    },
+    "/org/freedesktop/UDisks2/drives/SAMSUNG_MZVL2512HDJD_00BL2_S6Z5NE0W620612": {
+      "avail_spare": 100,
+      "cctemp": 358,
+      "critical_temp_time": 0,
+      "ctrl_busy_time": 5682,
+      "media_errors": 0,
+      "num_err_log_entries": 0,
+      "percent_used": 7,
+      "power_cycles": 79062,
+      "spare_thresh": 10,
+      "total_data_read": 70774487040000,
+      "total_data_written": 49741166592000,
+      "unsafe_shutdowns": 2141,
+      "warning_temp_time": 0,
+      "wctemp": 356
+    }
+  }
+}
