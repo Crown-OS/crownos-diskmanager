@@ -1,0 +1,20 @@
+# Builds an Arch package on a v* tag and publishes it on the release
+# Logic lives in Crown-OS/.github.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    uses: Crown-OS/.github/.github/workflows/arch-package.yml@main
+    with:
+      depends: >-
+        wayland libxkbcommon vulkan-icd-loader udisks2 polkit xdg-utils
+        btrfs-progs cryptsetup dosfstools e2fsprogs exfatprogs f2fs-tools
+        ntfs-3g xfsprogs
+    secrets: inherit
