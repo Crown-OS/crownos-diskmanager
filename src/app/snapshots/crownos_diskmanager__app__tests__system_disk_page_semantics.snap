@@ -16,71 +16,75 @@ window @0,0 1100x740
       menu_item "Partition 5 FAT32" @18,204 236x36
       menu_item "Partition 6 ext4" @18,240 236x36
   menu_item "Open Image…" @18,686 236x36
-  button "Erase" [disabled] @266,18 83x28
-  button "Image" @353,18 28x22
-  button "Open Image" @975,18 119x28
-  scroll_view "SAMSUNG MZVL2512HDJD-00BL2" @266,64 828x670
-    image "NVMe SSD" @298,101.4 32x32
-    text "SAMSUNG MZVL2512HDJD-00BL2" @344,96 343.2x26.4
-    text "512 GB · NVMe SSD" @344,124.4 343.2x14.4
-    text "Good" @1033.2,96 28.8x14.4
-    group "Partition map" @298,162.8 764x64
-      button "Partition 5, FAT32, 1.1 GB, 17 % used" @301,165.8 14.81x58
-      button "Partition 6, ext4, 511 GB, 62 % used" @319.81,165.8 739.19x58
-    group "Selected region" @298,250.8 764x113.2
-      text "Partition 5" @316,268.8 237.6x20.4
-      text "FAT32 · 1.1 GB · mounted at /boot" @316,291.2 237.6x14.4
-      button "Open in Files" @903.4,268.8 140.6x28
-      progress_bar "Partition 5 usage" value="17 %" @316,317.6 728x28.4
-        text "180 MB used of 1.1 GB · 890 MB free" @316,331.6 728x14.4
-    group "Health" @298,412 764x338
-      heading "Health" @298,412 764x14.4
-      text "Good" @330,449.4 28.8x14.4
-      text "This disk is working normally." @370.8,449.4 252x16.8
-      group "Temperature" @299,480.2 762x44.8
-        text "Temperature" @317,494.2 672x16.8
-        text "48 °C" @1001,494.2 42x16.8
-      group "Life used" @299,525 762x44.8
-        text "Life used" @317,539 688.8x16.8
-        text "7 %" @1017.8,539 25.2x16.8
-      group "Available spare" @299,569.8 762x44.8
-        text "Available spare" @317,583.8 672x16.8
-        text "100 %" @1001,583.8 42x16.8
-      group "Powered on" @299,614.6 762x44.8
-        text "Powered on" @317,628.6 630x16.8
-        text "1547 hours" @959,628.6 84x16.8
-      group "Unsafe shutdowns" @299,659.4 762x44.8
-        text "Unsafe shutdowns" @317,673.4 680.4x16.8
-        text "2141" @1009.4,673.4 33.6x16.8
-      group "Media errors" @299,704.2 762x44.8
-        text "Media errors" @317,718.2 705.6x16.8
-        text "0" @1034.6,718.2 8.4x16.8
-    group "Details" [offscreen] @298,774 764x382.8
-      heading "Details" [offscreen] @298,774 764x14.4
-      group "Model" [offscreen] @299,797.4 762x44.8
-        text "Model" [offscreen] @317,811.4 495.6x16.8
-        text "SAMSUNG MZVL2512HDJD-00BL2" [offscreen] @824.6,811.4 218.4x16.8
-      group "Serial number" [offscreen] @299,842.2 762x44.8
-        text "Serial number" [offscreen] @317,856.2 596.4x16.8
-        text "S6Z5NE0W620612" [offscreen] @925.4,856.2 117.6x16.8
-      group "Firmware revision" [offscreen] @299,887 762x44.8
-        text "Firmware revision" [offscreen] @317,901 646.8x16.8
-        text "5L1QGXD7" [offscreen] @975.8,901 67.2x16.8
-      group "Capacity" [offscreen] @299,931.8 762x44.8
-        text "Capacity" [offscreen] @317,945.8 663.6x16.8
-        text "512 GB" [offscreen] @992.6,945.8 50.4x16.8
-      group "Partition table" [offscreen] @299,976.6 762x44.8
-        text "Partition table" [offscreen] @317,990.6 630x16.8
-        text "GUID (GPT)" [offscreen] @959,990.6 84x16.8
-      group "Connection" [offscreen] @299,1021.4 762x44.8
-        text "Connection" [offscreen] @317,1035.4 680.4x16.8
-        text "NVMe" [offscreen] @1009.4,1035.4 33.6x16.8
-      group "Rotation rate" [offscreen] @299,1066.2 762x44.8
-        text "Rotation rate" [offscreen] @317,1080.2 621.6x16.8
-        text "Solid state" [offscreen] @950.6,1080.2 92.4x16.8
-      group "Device" [offscreen] @299,1111 762x44.8
-        text "Device" [offscreen] @317,1125 613.2x16.8
-        text "/dev/nvme1n1" [offscreen] @942.2,1125 100.8x16.8
+  button "Erase" [disabled] @266,6 83x28
+  button "Image" @353,6 28x22
+  button @389,6 486x28
+  button "Open Image" @883,6 119x28
+  button "Maximize" @1010,6 28x28
+  button "Minimize" @1038,6 28x28
+  button "Close" @1066,6 28x28
+  scroll_view "SAMSUNG MZVL2512HDJD-00BL2" @266,40 828x694
+    image "NVMe SSD" @298,77.4 32x32
+    text "SAMSUNG MZVL2512HDJD-00BL2" @344,72 343.2x26.4
+    text "512 GB · NVMe SSD" @344,100.4 343.2x14.4
+    text "Good" @1033.2,72 28.8x14.4
+    group "Partition map" @298,138.8 764x64
+      button "Partition 5, FAT32, 1.1 GB, 17 % used" @301,141.8 14.81x58
+      button "Partition 6, ext4, 511 GB, 62 % used" @319.81,141.8 739.19x58
+    group "Selected region" @298,226.8 764x113.2
+      text "Partition 5" @316,244.8 237.6x20.4
+      text "FAT32 · 1.1 GB · mounted at /boot" @316,267.2 237.6x14.4
+      button "Open in Files" @903.4,244.8 140.6x28
+      progress_bar "Partition 5 usage" value="17 %" @316,293.6 728x28.4
+        text "180 MB used of 1.1 GB · 890 MB free" @316,307.6 728x14.4
+    group "Health" @298,388 764x338
+      heading "Health" @298,388 764x14.4
+      text "Good" @330,425.4 28.8x14.4
+      text "This disk is working normally." @370.8,425.4 252x16.8
+      group "Temperature" @299,456.2 762x44.8
+        text "Temperature" @317,470.2 672x16.8
+        text "48 °C" @1001,470.2 42x16.8
+      group "Life used" @299,501 762x44.8
+        text "Life used" @317,515 688.8x16.8
+        text "7 %" @1017.8,515 25.2x16.8
+      group "Available spare" @299,545.8 762x44.8
+        text "Available spare" @317,559.8 672x16.8
+        text "100 %" @1001,559.8 42x16.8
+      group "Powered on" @299,590.6 762x44.8
+        text "Powered on" @317,604.6 630x16.8
+        text "1547 hours" @959,604.6 84x16.8
+      group "Unsafe shutdowns" @299,635.4 762x44.8
+        text "Unsafe shutdowns" @317,649.4 680.4x16.8
+        text "2141" @1009.4,649.4 33.6x16.8
+      group "Media errors" @299,680.2 762x44.8
+        text "Media errors" @317,694.2 705.6x16.8
+        text "0" @1034.6,694.2 8.4x16.8
+    group "Details" [offscreen] @298,750 764x382.8
+      heading "Details" [offscreen] @298,750 764x14.4
+      group "Model" [offscreen] @299,773.4 762x44.8
+        text "Model" [offscreen] @317,787.4 495.6x16.8
+        text "SAMSUNG MZVL2512HDJD-00BL2" [offscreen] @824.6,787.4 218.4x16.8
+      group "Serial number" [offscreen] @299,818.2 762x44.8
+        text "Serial number" [offscreen] @317,832.2 596.4x16.8
+        text "S6Z5NE0W620612" [offscreen] @925.4,832.2 117.6x16.8
+      group "Firmware revision" [offscreen] @299,863 762x44.8
+        text "Firmware revision" [offscreen] @317,877 646.8x16.8
+        text "5L1QGXD7" [offscreen] @975.8,877 67.2x16.8
+      group "Capacity" [offscreen] @299,907.8 762x44.8
+        text "Capacity" [offscreen] @317,921.8 663.6x16.8
+        text "512 GB" [offscreen] @992.6,921.8 50.4x16.8
+      group "Partition table" [offscreen] @299,952.6 762x44.8
+        text "Partition table" [offscreen] @317,966.6 630x16.8
+        text "GUID (GPT)" [offscreen] @959,966.6 84x16.8
+      group "Connection" [offscreen] @299,997.4 762x44.8
+        text "Connection" [offscreen] @317,1011.4 680.4x16.8
+        text "NVMe" [offscreen] @1009.4,1011.4 33.6x16.8
+      group "Rotation rate" [offscreen] @299,1042.2 762x44.8
+        text "Rotation rate" [offscreen] @317,1056.2 621.6x16.8
+        text "Solid state" [offscreen] @950.6,1056.2 92.4x16.8
+      group "Device" [offscreen] @299,1087 762x44.8
+        text "Device" [offscreen] @317,1101 613.2x16.8
+        text "/dev/nvme1n1" [offscreen] @942.2,1101 100.8x16.8
   list [offscreen] @550,716 0x0
   group "Dialog probe" value="None" [offscreen] @0,0 0x0
   group "Selection probe" value="Disk(DiskId(\"/org/freedesktop/UDisks2/drives/SAMSUNG_MZVL2512HDJD_00BL2_S6Z5NE0W620612\"))" [offscreen] @0,0 0x0

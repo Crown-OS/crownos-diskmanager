@@ -1,5 +1,5 @@
-use crownui::kit::icons;
-use crownui::prelude::{AnyView, Styled, View, ViewSeq, hstack, keyed, spacer};
+use crownui::kit::{icons, title_bar_spacer, window_controls};
+use crownui::prelude::{AnyView, Styled, View, ViewSeq, hstack, keyed};
 
 use super::actions::{DiskAction, Offer, Placement, action_button, offer_menu, offers};
 use crate::state::{Selection, Store};
@@ -16,8 +16,9 @@ pub fn toolbar(store: Store) -> impl ViewSeq {
     };
     (
         contextual_actions(store),
-        spacer(),
+        title_bar_spacer(),
         action_button(store, open_image),
+        window_controls(),
     )
 }
 
