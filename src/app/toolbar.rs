@@ -1,23 +1,17 @@
 use crownui::kit::{icons, title_bar_spacer, window_controls};
 use crownui::prelude::{AnyView, Styled, View, ViewSeq, hstack, keyed};
 
-use super::actions::{DiskAction, Offer, Placement, action_button, offer_menu, offers};
-use crate::state::{Selection, Store};
+use super::actions::{Offer, Placement, action_button, offer_menu, offers};
+use crate::state::Store;
 
 const TOOLBAR_GAP: f32 = 4.0;
 const IMAGE_MENU_LABEL: &str = "Image";
 const MORE_MENU_LABEL: &str = "More Actions";
 
 pub fn toolbar(store: Store) -> impl ViewSeq {
-    let open_image = Offer {
-        action: DiskAction::OpenImage,
-        selection: Selection::Overview,
-        refusal: None,
-    };
     (
         contextual_actions(store),
         title_bar_spacer(),
-        action_button(store, open_image),
         window_controls(),
     )
 }

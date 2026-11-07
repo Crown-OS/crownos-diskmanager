@@ -1,4 +1,4 @@
-use crownui::kit::{sidebar_with_header, toast_host, use_theme};
+use crownui::kit::{INTER_FAMILY, sidebar_with_header, toast_host, use_theme};
 use crownui::prelude::{Cx, Listeners, Styled, View, keyed, vstack, zstack};
 
 use super::actions::{ContextMenu, context_menu_layer};
@@ -42,6 +42,7 @@ pub fn shell(cx: &mut Cx, store: Store) -> impl View + use<> {
         .h_full()
         .on_pointer_down(move |cx, event| menu.track_pointer(cx, event.position)),
     )
+    .font_family(INTER_FAMILY)
     .w_full()
     .h_full()
 }

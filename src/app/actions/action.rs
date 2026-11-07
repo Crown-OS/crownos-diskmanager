@@ -18,7 +18,6 @@ pub enum DiskAction {
     Eject,
     CloseImage,
     NewPartition,
-    OpenImage,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -46,7 +45,6 @@ impl DiskAction {
             Self::Eject => "Eject",
             Self::CloseImage => "Close Image",
             Self::NewPartition => "New Partition",
-            Self::OpenImage => "Open Image",
         }
     }
 
@@ -65,7 +63,6 @@ impl DiskAction {
             Self::CreateImage => icons::HARD_DRIVE_DOWNLOAD,
             Self::RestoreImage => icons::HARD_DRIVE_UPLOAD,
             Self::NewPartition => icons::PLUS,
-            Self::OpenImage => icons::FILE_BOX,
         }
     }
 
@@ -93,7 +90,6 @@ impl DiskAction {
             Self::RestoreImage => Action::RestoreImage,
             Self::Eject | Self::CloseImage => Action::Eject,
             Self::NewPartition => Action::CreatePartition,
-            Self::OpenImage => return None,
         })
     }
 }

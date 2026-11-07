@@ -1,4 +1,5 @@
 pub mod byte_size_parse;
+pub mod contrast;
 pub mod derived;
 pub mod file_uri;
 pub mod health_text;

@@ -24,9 +24,6 @@ pub fn perform(cx: &mut Cx, store: Store, selection: &Selection, action: DiskAct
 }
 
 fn step_for(inventory: &Inventory, selection: &Selection, action: DiskAction) -> Option<Step> {
-    if action == DiskAction::OpenImage {
-        return Some(Step::Open(DialogRequest::OpenImage));
-    }
     let target = selection_target(selection)?;
     Some(match (action, &target) {
         (DiskAction::Mount, Target::Block(block)) => Step::Send(Command::Mount(block.clone())),

@@ -3,23 +3,24 @@ source: src/app/tests.rs
 expression: window.app.semantics_snapshot()
 ---
 window @0,0 1100x740
-  menu_item "Overview" @18,18 236x36
-  text "Internal" @28,60 216x14.4
-  list @18,88 236x188
-    menu_item "CT500P3PSSD8" @18,88 236x36
-    button "Hide Volumes" @222,92 28x28
-    list @18,128 236x36
-      menu_item "Workspace ext4" @18,128 236x36
-    menu_item "SAMSUNG MZVL2512HDJD-00BL2" [focused, checked] @18,164 236x36
-    button "Hide Volumes" @222,168 28x28
-    list @18,204 236x72
-      menu_item "Partition 5 FAT32" @18,204 236x36
-      menu_item "Partition 6 ext4" @18,240 236x36
+  image @33,39 22x22
+  text "Disk Manager" @74,40.4 115.2x19.2
+  menu_item "Overview" @18,88 236x36
+  text "Internal" @28,130 216x14.4
+  list @18,158 236x188
+    menu_item "CT500P3PSSD8" @18,158 236x36
+    button "Hide Volumes" @222,162 28x28
+    list @18,198 236x36
+      menu_item "Workspace ext4" @18,198 236x36
+    menu_item "SAMSUNG MZVL2512HDJD-00BL2" [focused, checked] @18,234 236x36
+    button "Hide Volumes" @222,238 28x28
+    list @18,274 236x72
+      menu_item "Partition 5 FAT32" @18,274 236x36
+      menu_item "Partition 6 ext4" @18,310 236x36
   menu_item "Open Image…" @18,686 236x36
   button "Erase" [disabled] @266,6 83x28
   button "Image" @353,6 28x22
-  button @389,6 486x28
-  button "Open Image" @883,6 119x28
+  button @389,6 613x28
   button "Maximize" @1010,6 28x28
   button "Minimize" @1038,6 28x28
   button "Close" @1066,6 28x28

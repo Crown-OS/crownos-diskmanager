@@ -20,7 +20,7 @@ mod util;
 use anyhow::{Result, bail};
 use crownui::AppConfig;
 use crownui::kit::{INTER_FAMILY, inter_font};
-use crownui::prelude::BLACK;
+use crownui::prelude::{BLACK, CornerShape};
 
 const INITIAL_SIZE: (u32, u32) = (1100, 740);
 const MIN_SIZE: (u32, u32) = (760, 520);
@@ -34,6 +34,7 @@ fn main() -> Result<()> {
         .size(INITIAL_SIZE.0, INITIAL_SIZE.1)
         .min_size(MIN_SIZE.0, MIN_SIZE.1)
         .clear_color(BLACK)
+        .corner_shape(CornerShape::Squircle)
         .font(inter_font().to_vec(), Some(INTER_FAMILY));
     Ok(crownui::run(app::root(), config)?)
 }

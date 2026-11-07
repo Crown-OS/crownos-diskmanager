@@ -1,3 +1,4 @@
+mod brand;
 mod disk_row;
 mod entry;
 mod volume_row;
@@ -11,6 +12,7 @@ use crate::app::ContextMenu;
 use crate::state::{DialogRequest, Selection, Store};
 use crate::util::derived::derived;
 use crate::util::nothing::nothing;
+use brand::brand;
 use disk_row::disk_row;
 use entry::{Category, SidebarDisk, sidebar_disks};
 
@@ -34,7 +36,7 @@ pub fn sidebar_menus(cx: &mut Cx, store: Store, menu: ContextMenu) -> impl ViewS
         .collect();
     let open_image = sidebar_item(OPEN_IMAGE_LABEL, icons::PLUS, false)
         .on_click(move |cx, _| store.open_dialog(cx, DialogRequest::OpenImage));
-    (overview, sections, spacer(), open_image)
+    (brand(), overview, sections, spacer(), open_image)
 }
 
 fn disk_section(

@@ -1,4 +1,4 @@
-use crownui::kit::{INTER_FAMILY, TEXT_SIZE, use_theme};
+use crownui::kit::{TEXT_SIZE, use_theme};
 use crownui::prelude::{
     Cx, Listeners, Role, Runtime, Semantic, Signal, Styled, TRANSPARENT, View, bind, component,
     hstack, text, vstack, zstack,
@@ -6,9 +6,9 @@ use crownui::prelude::{
 
 use super::model::{MapSegment, SegmentPaint};
 use crate::components::disk_icon::lock_icon;
-use crate::components::text::caption;
+use crate::components::text::strong_caption;
 use crate::state::Selection;
-use crate::util::partition_colors::{partition_color, partition_fill};
+use crate::util::partition_colors::{partition_fill, partition_usage_color};
 use crate::util::tint::tint;
 
 const SEGMENT_RADIUS: f32 = 8.0;
@@ -18,6 +18,7 @@ const SELECTION_RING: f32 = 2.0;
 const FREE_BORDER: f32 = 1.0;
 const LABEL_GAP: f32 = 2.0;
 const LOCK_SIZE: f32 = 12.0;
+const USAGE_STRIP_HEIGHT: f32 = 4.0;
 
 pub(super) fn segment<F>(segment: MapSegment, selection: Signal<Selection>, on_menu: F) -> impl View
 where
@@ -47,15 +48,17 @@ where
             SegmentPaint::Partition { color, .. } => partition_fill(theme, color),
             SegmentPaint::Free => theme.surface.sunken,
         });
-        let used_fill = match (paint, used) {
+        let usage_strip = match (paint, used) {
             (SegmentPaint::Partition { color, .. }, Some(fraction)) => Some(
                 vstack(())
                     .absolute()
-                    .top(0.0)
                     .bottom(0.0)
                     .left(0.0)
+                    .h(USAGE_STRIP_HEIGHT)
                     .w_frac(fraction.clamp(0.0, 1.0))
-                    .bg(tint(theme, move |theme| partition_color(theme, color))),
+                    .bg(tint(theme, move |theme| {
+                        partition_usage_color(theme, color)
+                    })),
             ),
             _ => None,
         };
@@ -68,13 +71,12 @@ where
                     text(title)
                         .text_size(TEXT_SIZE)
                         .font_medium()
-                        .font_family(INTER_FAMILY)
                         .truncate()
                         .text_color(tint(theme, |theme| theme.text.primary)),
                 ))
                 .gap(LABEL_GAP * 2.0)
                 .items_center(),
-                caption(detail),
+                strong_caption(detail),
             ))
             .gap(LABEL_GAP)
             .p(SEGMENT_PADDING)
@@ -83,7 +85,7 @@ where
         });
         let ring_selected = is_selected.clone();
         let click_region = region.clone();
-        zstack((used_fill, label))
+        zstack((usage_strip, label))
             .grow(weight)
             .shrink(1.0)
             .basis(0.0)

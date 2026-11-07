@@ -3,7 +3,7 @@ use crownui::kit::{Segment, SegmentedBarOptions, segmented_bar, use_theme};
 use crownui::prelude::{Role, Semantic, Styled, View, component, vstack};
 
 use super::text::caption;
-use crate::util::partition_colors::partition_color;
+use crate::util::partition_colors::partition_meter_color;
 use crate::util::region_text::whole_percent;
 
 const BAR_HEIGHT: f32 = 8.0;
@@ -33,7 +33,7 @@ pub fn usage_meter(name: impl Into<String>, shares: Vec<UsageShare>, total: Byte
                         .map(|share| {
                             Segment::new(
                                 share.used.bytes() as f32,
-                                partition_color(theme, share.color),
+                                partition_meter_color(theme, share.color),
                             )
                         })
                         .chain([Segment::new(free.bytes() as f32, theme.control.track)])
