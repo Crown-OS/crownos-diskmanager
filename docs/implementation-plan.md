@@ -219,7 +219,7 @@ Disabled actions stay visible, with a tooltip explaining why ("Can't resize: exF
 
 | Concern | Interface | Notes |
 |---|---|---|
-| Discovery + hotplug | `org.freedesktop.DBus.ObjectManager` on `/org/freedesktop/UDisks2`: `GetManagedObjects`, `InterfacesAdded`, `InterfacesRemoved`, plus `PropertiesChanged` (match rule `path_namespace=/org/freedesktop/UDisks2`) | Replaces udev/libblkid/sysfs polling entirely. Pattern to copy: `crownconnect-linux/src/bluetooth/telephony/mod.rs`. |
+| Discovery + hotplug | `org.freedesktop.DBus.ObjectManager` on `/org/freedesktop/UDisks2`: `GetManagedObjects`, `InterfacesAdded`, `InterfacesRemoved`, plus `PropertiesChanged` (match rule `path_namespace=/org/freedesktop/UDisks2`) | Replaces udev/libblkid/sysfs polling entirely. Pattern to copy: `crownlink-linux/src/bluetooth/telephony/mod.rs`. |
 | Drive info | `UDisks2.Drive`: `Vendor`, `Model`, `Serial`, `WWN`, `Revision`, `Size`, `ConnectionBus`, `RotationRate`, `Removable`, `MediaRemovable`, `Ejectable`, `CanPowerOff`, `Optical`, `SortKey`; `Eject`, `PowerOff` | |
 | Block info | `UDisks2.Block`: `Device`, `PreferredDevice`, `Size`, `Drive`, `IdType`, `IdUsage`, `IdLabel`, `IdUUID`, `HintSystem`, `HintIgnore`, `CryptoBackingDevice`; `Format`, `OpenDevice`, `Rescan` | `OpenForBackup`/`OpenForRestore` are deprecated since 2.7.3. Use `OpenDevice("r"/"w", {flags: O_EXCL\|O_CLOEXEC\|O_DIRECT})`. |
 | Partitioning | `PartitionTable`: `Type`, `Partitions`; `CreatePartition`, `CreatePartitionAndFormat`. `Partition`: `Number`, `Offset`, `Size`, `Type`, `Name`, `UUID`, `Table`, `IsContained`, `IsContainer`; `Resize`, `Delete`, `SetName` | 1 MiB alignment is done by UDisks (libfdisk). |
