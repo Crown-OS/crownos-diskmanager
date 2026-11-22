@@ -1,6 +1,6 @@
-use crownos_disks::Command;
 use crownos_disks::command::Target;
 use crownos_disks::model::{ByteSize, DiskId, Inventory, Region};
+use crownos_disks::{Command, Interaction};
 use crownui::prelude::Cx;
 
 use super::action::DiskAction;
@@ -26,7 +26,10 @@ pub fn perform(cx: &mut Cx, store: Store, selection: &Selection, action: DiskAct
 fn step_for(inventory: &Inventory, selection: &Selection, action: DiskAction) -> Option<Step> {
     let target = selection_target(selection)?;
     Some(match (action, &target) {
-        (DiskAction::Mount, Target::Block(block)) => Step::Send(Command::Mount(block.clone())),
+        (DiskAction::Mount, Target::Block(block)) => Step::Send(Command::Mount {
+            block: block.clone(),
+            interaction: Interaction::Allowed,
+        }),
         (DiskAction::Unmount, Target::Block(block)) => Step::Send(Command::Unmount(block.clone())),
         (DiskAction::Lock, Target::Block(block)) => Step::Send(Command::Lock(block.clone())),
         (DiskAction::CheckRepair, Target::Block(block)) => {

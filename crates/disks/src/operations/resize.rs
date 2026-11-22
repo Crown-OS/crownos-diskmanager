@@ -9,7 +9,7 @@ use super::recorder::{Recorder, entry};
 use super::teardown::{mount, unmount};
 use super::udisks::{ENCRYPTED, FILESYSTEM, PARTITION, call, options};
 use crate::client::Session;
-use crate::command::{Completion, Secret};
+use crate::command::{Completion, Interaction, Secret};
 use crate::error::StorageError;
 use crate::guard::Refusal;
 use crate::journal::{Journal, JournalEntry, JournalOperation};
@@ -263,7 +263,7 @@ impl<'a> ResizeJob<'a> {
             (ResizeMode::Offline, true) => unmount(self.session, path)
                 .await
                 .map(|()| MountChange::Unmounted),
-            (ResizeMode::Online, false) => mount(self.session, path)
+            (ResizeMode::Online, false) => mount(self.session, path, Interaction::Allowed)
                 .await
                 .map(|_| MountChange::Mounted),
             _ => Ok(MountChange::Unchanged),
@@ -273,7 +273,9 @@ impl<'a> ResizeJob<'a> {
     async fn restore_mount(&self, path: &str, change: MountChange) {
         let restored = match change {
             MountChange::Unchanged => Ok(()),
-            MountChange::Unmounted => mount(self.session, path).await.map(drop),
+            MountChange::Unmounted => mount(self.session, path, Interaction::Allowed)
+                .await
+                .map(drop),
             MountChange::Mounted => unmount(self.session, path).await,
         };
         drop(restored);

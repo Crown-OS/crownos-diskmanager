@@ -27,8 +27,6 @@ projects as of 2026-11-04.
 
 | Source | Adopted | Deliberately left out |
 |---|---|---|
-| macOS Disk Utility | Sidebar grouped **Internal / External / Disk Images**, disk → volume hierarchy, toolbar of contextual actions, usage bar, First Aid (→ *Check & Repair*), Erase sheet with format + scheme, Restore, Create Image, Mount/Unmount, Info | APFS containers / volume groups, RAID sets, "Show only volumes" mode, image encryption, sparse bundles |
-| Windows Disk Management | **Graphical partition map** with free space shown, *Shrink* / *Extend into adjacent free space*, New Simple Volume as a single dialog, format right from the map | Dynamic disks, spanned/striped volumes, drive letters (mount points come from UDisks), VHD attach |
 | Windows 11 Settings → Disks & volumes | **Plain-language NVMe health**: remaining life, spare, temperature, Good/Caution/Bad status | Storage Spaces, Storage Sense |
 | GNOME Disks | UDisks-based implementation patterns, `.img` / `.iso` / `.xz` restore | Benchmark, mount-options/fstab editor, ATA power/APM settings, partition type GUID editor, flags editor |
 

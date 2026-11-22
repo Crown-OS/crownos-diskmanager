@@ -84,7 +84,9 @@ pub(super) fn plan(inventory: &Inventory, command: &Command) -> Option<Operation
     let block = |block: &crate::model::BlockId| Target::Block(block.clone());
     let disk = |disk: &DiskId| Target::Disk(disk.clone());
     let shape = match command {
-        Command::Mount(id) => shape(block(id), Some(Action::Mount), ("Mounting", "mount")),
+        Command::Mount { block: id, .. } => {
+            shape(block(id), Some(Action::Mount), ("Mounting", "mount"))
+        }
         Command::Unmount(id) => shape(block(id), Some(Action::Unmount), ("Unmounting", "unmount")),
         Command::Eject(id) => shape(disk(id), Some(Action::Eject), ("Ejecting", "eject")),
         Command::Rename { block: id, .. } => {
@@ -258,8 +260,11 @@ mod tests {
     #[test]
     fn everyday_and_control_commands() {
         let inventory = test_inventory::desktop_with_usb();
-        let mount =
-            plan(&inventory, &Command::Mount(BlockId::new(PHOTOS_BLOCK))).expect("operation");
+        let mount_photos = Command::Mount {
+            block: BlockId::new(PHOTOS_BLOCK),
+            interaction: crate::command::Interaction::Forbidden,
+        };
+        let mount = plan(&inventory, &mount_photos).expect("operation");
         assert_eq!(mount.exclusivity, Exclusivity::Shared);
         assert!(mount.expected.is_none());
         assert!(plan(&inventory, &Command::RefreshUsage).is_none());

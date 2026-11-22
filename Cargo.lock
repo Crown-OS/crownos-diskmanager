@@ -394,6 +394,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "capture"
+version = "0.2.0"
+dependencies = [
+ "crowntest",
+ "geometry",
+ "graphics",
+ "impeller",
+ "inspect",
+ "libc",
+ "runtime",
+ "semantics",
+ "serde",
+ "serde_json",
+ "taffy-layout",
+ "thiserror",
+ "view",
+ "windowing",
+]
+
+[[package]]
 name = "cc"
 version = "1.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -502,6 +522,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "crownos-automount"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "crownos-disks",
+ "rustix",
+ "tokio",
+]
+
+[[package]]
 name = "crownos-config"
 version = "0.1.0"
 dependencies = [
@@ -517,6 +547,7 @@ name = "crownos-diskmanager"
 version = "0.2.0"
 dependencies = [
  "anyhow",
+ "capture",
  "crownos-disks",
  "crowntest",
  "crownui",

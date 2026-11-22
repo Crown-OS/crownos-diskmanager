@@ -7,7 +7,7 @@ use super::check::Inspection;
 use super::udisks::{call, options};
 use super::{OperationContext, check, format, image, mount, resize};
 use crate::client::Session;
-use crate::command::{FormatSpec, OperationId, PartitionScheme};
+use crate::command::{FormatSpec, Interaction, OperationId, PartitionScheme};
 use crate::error::StorageError;
 use crate::model::{BlockId, ByteSize, DiskId, FilesystemKind, Inventory};
 
@@ -78,7 +78,7 @@ async fn erase_check_shrink_and_grow_a_loop_device() -> Result<(), StorageError>
     .await;
     check::inspect(&session, &context, &partition, Inspection::Check).await?;
 
-    mount::mount(&session, &partition).await?;
+    mount::mount(&session, &partition, Interaction::Forbidden).await?;
     session.refresh_usage();
     let bounds = settled(&session, |inventory| {
         crate::limits::resize_bounds(inventory, &partition)

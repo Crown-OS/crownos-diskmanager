@@ -22,6 +22,6 @@ mod snapshot;
 mod util;
 mod watcher;
 
-pub use command::{Command, Event};
+pub use command::{Command, Event, Interaction};
 pub use error::{StorageError, UserError};
 pub use service::run;

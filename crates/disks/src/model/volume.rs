@@ -11,6 +11,10 @@ pub struct Volume {
     pub uuid: String,
     pub mount_points: Vec<PathBuf>,
     pub usage: Option<Usage>,
+    /// UDisks2 asks for the block to stay out of sight (`HintIgnore`): an EFI
+    /// system, recovery or other firmware partition.
+    #[serde(default)]
+    pub hidden: bool,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]

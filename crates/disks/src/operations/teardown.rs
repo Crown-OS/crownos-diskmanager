@@ -1,5 +1,6 @@
-use super::udisks::{ENCRYPTED, FILESYSTEM, SWAPSPACE, call, options};
+use super::udisks::{ENCRYPTED, FILESYSTEM, SWAPSPACE, call, options, options_for};
 use crate::client::Session;
+use crate::command::Interaction;
 use crate::error::StorageError;
 use crate::guard::target::unlocked;
 use crate::model::{Content, Partition, Unlocked};
@@ -9,8 +10,19 @@ pub(crate) async fn unmount(session: &Session, path: &str) -> Result<(), Storage
     call(session, path, FILESYSTEM, "Unmount", (options(),)).await
 }
 
-pub(crate) async fn mount(session: &Session, path: &str) -> Result<String, StorageError> {
-    call(session, path, FILESYSTEM, "Mount", (options(),)).await
+pub(crate) async fn mount(
+    session: &Session,
+    path: &str,
+    interaction: Interaction,
+) -> Result<String, StorageError> {
+    call(
+        session,
+        path,
+        FILESYSTEM,
+        "Mount",
+        (options_for(interaction),),
+    )
+    .await
 }
 
 pub(crate) async fn lock(session: &Session, path: &str) -> Result<(), StorageError> {

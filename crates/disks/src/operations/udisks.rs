@@ -7,6 +7,7 @@ use zbus::Variant;
 use zbus::zvariant::{DynamicType, Type};
 
 use crate::client::Session;
+use crate::command::Interaction;
 use crate::error::StorageError;
 
 pub(crate) const BLOCK: &str = "org.freedesktop.UDisks2.Block";
@@ -25,25 +26,15 @@ const INTERFACE_WAIT_ATTEMPTS: u32 = 25;
 /// Method options for UDisks2 calls, starting with the standard authorization option.
 pub(crate) type Options<'a> = HashMap<&'static str, Variant<'a>>;
 
-/// Whether polkit may show an authentication prompt for a call.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-enum Interaction {
-    Allowed,
-    Forbidden,
-}
-
-/// The app lets polkit prompt; tests never wait for a prompt nobody answers.
-const INTERACTION: Interaction = match cfg!(test) {
-    true => Interaction::Forbidden,
-    false => Interaction::Allowed,
-};
-
 /// Options every operation sends, starting with the authorization option.
 pub(crate) fn options<'a>() -> Options<'a> {
-    HashMap::from([(
-        "auth.no_user_interaction",
-        Variant::from(INTERACTION == Interaction::Forbidden),
-    )])
+    options_for(Interaction::Allowed)
+}
+
+/// Tests never let polkit prompt, so they never wait for a prompt nobody answers.
+pub(crate) fn options_for<'a>(interaction: Interaction) -> Options<'a> {
+    let forbidden = cfg!(test) || interaction == Interaction::Forbidden;
+    HashMap::from([("auth.no_user_interaction", Variant::from(forbidden))])
 }
 
 /// Calls `method` on a UDisks2 object, keeping the daemon's error text for the user's details.

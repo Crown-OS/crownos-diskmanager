@@ -110,6 +110,7 @@ mod tests {
                 total: ByteSize(475_000_000_000),
                 used: ByteSize(used),
             }),
+            hidden: false,
         })
     }
 

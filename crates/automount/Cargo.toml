@@ -1,0 +1,18 @@
+[package]
+name = "crownos-automount"
+version = "0.1.0"
+description = "Mounts drives for the signed-in user as they appear"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+anyhow = "1"
+crownos-disks = { path = "../disks" }
+rustix = { version = "1", features = ["process"] }
+tokio = { version = "1", default-features = false, features = ["macros", "rt", "sync"] }
+
+[dev-dependencies]
+crownos-disks = { path = "../disks", features = ["fixtures"] }
+
+[lints]
+workspace = true

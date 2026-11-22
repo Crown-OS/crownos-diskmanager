@@ -56,6 +56,7 @@ fn volume(block: ObjectView<'_>) -> Volume {
             .map(PathBuf::from)
             .collect(),
         usage: None,
+        hidden: block.flag(interface::BLOCK, "HintIgnore"),
     }
 }
 

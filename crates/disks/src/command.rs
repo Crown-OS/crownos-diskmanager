@@ -58,9 +58,19 @@ pub enum Target {
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord, Serialize, Deserialize)]
 pub struct OperationId(pub u64);
 
+/// Whether polkit may show an authentication prompt for a call.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Interaction {
+    Allowed,
+    Forbidden,
+}
+
 #[derive(Debug, Clone)]
 pub enum Command {
-    Mount(BlockId),
+    Mount {
+        block: BlockId,
+        interaction: Interaction,
+    },
     Unmount(BlockId),
     Eject(DiskId),
     Rename {

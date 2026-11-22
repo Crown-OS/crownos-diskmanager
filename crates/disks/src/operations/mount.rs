@@ -2,14 +2,23 @@ use super::completion::completed;
 use super::lookup::block_target;
 use super::teardown;
 use crate::client::Session;
-use crate::command::Completion;
+use crate::command::{Completion, Interaction};
 use crate::error::StorageError;
 use crate::model::BlockId;
 
-pub(crate) async fn mount(session: &Session, block: &BlockId) -> Result<Completion, StorageError> {
+pub(crate) async fn mount(
+    session: &Session,
+    block: &BlockId,
+    interaction: Interaction,
+) -> Result<Completion, StorageError> {
     let inventory = session.current();
     let target = block_target(&inventory, block)?;
-    let mount_point = teardown::mount(session, target.filesystem_block().object_path()).await?;
+    let mount_point = teardown::mount(
+        session,
+        target.filesystem_block().object_path(),
+        interaction,
+    )
+    .await?;
     Ok(completed(format!(
         "{} is mounted at {mount_point}.",
         target.name()

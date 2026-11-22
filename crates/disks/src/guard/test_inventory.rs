@@ -43,6 +43,7 @@ pub fn volume(
             total: ByteSize(used.0 * 2),
             used,
         }),
+        hidden: false,
     }
 }
 

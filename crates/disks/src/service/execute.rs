@@ -40,7 +40,7 @@ pub(super) async fn execute(
     command: Command,
 ) -> Result<Completion, StorageError> {
     match command {
-        Command::Mount(block) => mount::mount(session, &block).await,
+        Command::Mount { block, interaction } => mount::mount(session, &block, interaction).await,
         Command::Unmount(block) => mount::unmount(session, &block).await,
         Command::Eject(disk) => eject::eject(session, &disk).await,
         Command::Rename { block, label } => rename::rename(session, &block, &label).await,
